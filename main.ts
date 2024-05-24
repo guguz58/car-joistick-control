@@ -51,6 +51,13 @@ radio.onReceivedValue(function (name, value) {
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
         }
     }
+    if (name == "16") {
+        if (value == 1) {
+            music.stopAllSounds()
+        } else {
+            music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+        }
+    }
 })
 radio.setTransmitPower(7)
 radio.setFrequencyBand(0)
