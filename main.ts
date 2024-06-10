@@ -36,7 +36,7 @@ radio.onReceivedValue(function (name, value) {
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
         } else {
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 150)
+            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 50)
         }
     }
@@ -46,7 +46,7 @@ radio.onReceivedValue(function (name, value) {
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
         } else {
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 50)
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 150)
+            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
         }
     }
     if (name == "16") {
