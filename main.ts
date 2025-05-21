@@ -3,7 +3,8 @@ radio.onReceivedValue(function (name, value) {
         if (value == 1) {
             maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 0)
         } else {
-            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
+            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
+            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 208)
         }
     }
     if (name == "11") {
@@ -60,7 +61,7 @@ radio.onReceivedValue(function (name, value) {
 radio.setTransmitPower(7)
 radio.setFrequencyBand(0)
 radio.setGroup(1)
-basic.showIcon(IconNames.Angry)
+basic.showIcon(IconNames.Happy)
 basic.forever(function () {
-	
+    radio.sendNumber(input.acceleration(Dimension.X))
 })
