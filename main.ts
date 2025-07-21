@@ -62,7 +62,19 @@ radio.setTransmitPower(7)
 radio.setFrequencyBand(0)
 radio.setGroup(1)
 basic.showIcon(IconNames.Happy)
-huskylens.initMode(protocolAlgorithm.ALGORITHM_OBJECT_RECOGNITION)
+huskylens.initI2c()
+huskylens.initMode(protocolAlgorithm.OBJECTCLASSIFICATION)
 basic.forever(function () {
     radio.sendNumber(input.acceleration(Dimension.X))
+    huskylens.request()
+    if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+        huskylens.writeName(1, "Tümsek")
+        huskylens.writeOSD("Tümsek", 150, 30)
+        huskylens.clearOSD()
+    }
+    if (huskylens.isAppear(2, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+        huskylens.writeName(2, "çukur")
+        huskylens.writeOSD("Çukur", 150, 30)
+        huskylens.clearOSD()
+    }
 })
