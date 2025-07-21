@@ -71,10 +71,12 @@ basic.forever(function () {
         huskylens.writeName(1, "Tümsek")
         huskylens.writeOSD("Tümsek", 150, 30)
         huskylens.clearOSD()
+        radio.sendString("Tumsek")
     }
     if (huskylens.isAppear(2, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-        huskylens.writeName(2, "çukur")
-        huskylens.writeOSD("Çukur", 150, 30)
+        huskylens.writeName(2, "Cukur")
+        huskylens.writeOSD("Cukur", 150, 30)
         huskylens.clearOSD()
+        radio.sendString("Cukur")
     }
 })
