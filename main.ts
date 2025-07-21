@@ -62,6 +62,7 @@ radio.setTransmitPower(7)
 radio.setFrequencyBand(0)
 radio.setGroup(1)
 basic.showIcon(IconNames.Happy)
+huskylens.initMode(protocolAlgorithm.ALGORITHM_OBJECT_RECOGNITION)
 basic.forever(function () {
     radio.sendNumber(input.acceleration(Dimension.X))
 })
