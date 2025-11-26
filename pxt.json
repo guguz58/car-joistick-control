@@ -1,5 +1,5 @@
 {
-    "name": "car-joistick-control",
+    "name": "yol-bozuklugu-araba-car-joistick-control",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -17,7 +17,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "8.0.8",
+        "target": "8.0.18",
         "targetId": "microbit"
     },
     "supportedTargets": [
